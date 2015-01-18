@@ -5,15 +5,7 @@ var app = express();
 var parseUrlencoded = bodyParser.urlencoded({extended: false});
 var shortUrls = [];
 
-var respond = function(request, response) {
-  if (request.query.url) {
-    response.send(request.query.url);
-  } else {
-    response.send('hello yliseppo!');  
-  }
-}
-
-function generateId(length) {
+var generateId = function(length) {
   var id = "";
   var letters = "abcdefghijklmnopqrstuvwxyz";
 
@@ -24,7 +16,7 @@ function generateId(length) {
   return id;
 }
 
-function getUrl(id) {
+var getUrl = function(id) {
   for (var i = 0, len = shortUrls.length; i < len; i++) {
     console.log(shortUrls[i].id + ' ' + id);
     
@@ -40,7 +32,10 @@ app.get('/', function(request, response) {
 });
 
 app.get('/echo', function(request, response) {
-  respond(request, response);
+  if (request.query.url) {
+    response.send(request.query.url);
+  } else {
+    response.send('hello yliseppo!');  
 });
 
 app.get('/id/:id', function(request, response) {
