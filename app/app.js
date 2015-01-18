@@ -27,17 +27,6 @@ var getUrl = function(id) {
   return 'not found';
 }
 
-app.get('/', function(request, response) {
-  response.send('nothing here, cya');
-});
-
-app.get('/echo', function(request, response) {
-  if (request.query.url) {
-    response.send(request.query.url);
-  } else {
-    response.send('hello yliseppo!');  
-});
-
 app.get('/id/:id', function(request, response) {
   response.send('url: ' + getUrl(request.params.id));
 });
