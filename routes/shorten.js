@@ -19,7 +19,7 @@ router.post('/', function(request, response, next) {
   var newId = urldb.generateId(6);
   var newUrl = request.body.url;
   
-  urls.push({ id: newId, url: 'url: ' + newUrl });
+  urls.push({ id: newId, url: newUrl });
   
   response
     .set('Content-Type', 'text/plain')
