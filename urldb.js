@@ -18,7 +18,7 @@ exports.getLongUrl = function(id) {
     }
   }
   
-  return 'not found';
+  return 'http://www.yliseppo.com';
 }
 
 exports.getUrls = function() { return urls; }
