@@ -43,8 +43,3 @@ app.post('/shorten', parseUrlencoded, function(request, response) {
 app.listen(3000, function() {
  console.log('yliseppo is listening on 3000...!');
 });
-
-// check if valid url
-// check for duplicate id when generated?
-// check for existing urls
-// check for content type?
