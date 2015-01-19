@@ -6,7 +6,14 @@ var urldb = require('../urldb');
 router.get('/:id', function(request, response, next) {
   var longUrl = urldb.getLongUrl(request.params.id);
   
-  response.redirect(longUrl);
+  if (longUrl) {
+      response
+        .redirect(301, longUrl);  
+  } else {
+      response
+        .status(404)
+        .send('not found');
+  }
 });
 
 module.exports = router;
