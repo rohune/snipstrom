@@ -1,4 +1,10 @@
+var validator = require('validator');
+
 var urls = [];
+
+exports.validate = function(url) {
+  return validator.isURL(url);
+}
 
 exports.generateId = function(length) {
   var id = "";
@@ -18,7 +24,7 @@ exports.getLongUrl = function(id) {
     }
   }
   
-  return 'http://www.yliseppo.com';
+  return null;
 }
 
 exports.getUrls = function() { return urls; }

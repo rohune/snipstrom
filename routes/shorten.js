@@ -8,11 +8,18 @@ router.post('/', function(request, response, next) {
   var newId = urldb.generateId(6);
   var newUrl = request.body.url;
   
-  urls.push({ id: newId, url: newUrl });
+  if (urldb.validate(newUrl)) {
+      urls.push({ id: newId, url: newUrl });
+    
+      response
+        .set('Content-Type', 'text/plain')
+        .send('http://localhost:3000/id/' + newId);
+  } else {
+      response
+        .set('Content-Type', 'text/plain')
+        .send('invalid url!');
+  }
   
-  response
-    .set('Content-Type', 'text/plain')
-    .send('http://localhost:3000/id/' + newId)
 });
 
 module.exports = router;
