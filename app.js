@@ -62,9 +62,3 @@ app.use(function(err, req, res, next) {
 
 
 module.exports = app;
-
-// TODO
-// var fullUrl = req.protocol + '://' + req.get('host') + req.originalUrl;
-// check for duplicate id when generated?
-// check for existing urls
-// check for content type?
