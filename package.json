@@ -13,5 +13,8 @@
     "jade": "~1.9.0",
     "morgan": "~1.5.1",
     "serve-favicon": "~2.2.0"
+  },
+  "devDependencies": {
+    "validator": "^3.28.0"
   }
 }
