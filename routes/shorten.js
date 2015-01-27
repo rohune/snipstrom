@@ -6,6 +6,9 @@ var urldb = require('../urldb');
 router.post('/', function(request, response, next) {
   var urls = urldb.getUrls();
   var newId = urldb.generateId(6);
+  
+  // generate default url for attaching ids to
+  var rootUrl = request.protocol + '://' + request.get('host') + '/id/';
   var newUrl = request.body.url;
   
   if (urldb.validate(newUrl)) {
@@ -13,7 +16,7 @@ router.post('/', function(request, response, next) {
     
       response
         .set('Content-Type', 'text/plain')
-        .send('http://localhost:3000/id/' + newId);
+        .send(rootUrl + newId);
   } else {
       response
         .set('Content-Type', 'text/plain')
