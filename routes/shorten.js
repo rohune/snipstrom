@@ -3,7 +3,7 @@ var router = express.Router();
 
 var urldb = require('../urldb');
 
-router.post('/', function(request, response, next) {
+router.post('/', function(request, response, next) {  
   var urls = urldb.getUrls();
   var newId = urldb.generateId(6);
   
@@ -11,7 +11,7 @@ router.post('/', function(request, response, next) {
   // var rootUrl = request.protocol + '://' + request.get('host') + '/id/';
   var rootUrl = 'http://snip.yliseppo.com/id/';
   
-  var newUrl = request.body.url;
+  var newUrl = request.body.link;
   
   if (urldb.validate(newUrl)) {
       urls.push({ id: newId, url: newUrl });
