@@ -7,8 +7,10 @@ router.post('/', function(request, response, next) {
   var urls = urldb.getUrls();
   var newId = urldb.generateId(6);
   
-  // generate default url for attaching ids to
-  var rootUrl = request.protocol + '://' + request.get('host') + '/id/';
+  // generate default url for attaching ids to (if not behind reverse proxy)
+  // var rootUrl = request.protocol + '://' + request.get('host') + '/id/';
+  var rootUrl = 'http://snip.yliseppo.com/id/';
+  
   var newUrl = request.body.url;
   
   if (urldb.validate(newUrl)) {
