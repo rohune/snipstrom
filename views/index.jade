@@ -1,5 +1,15 @@
 extends layout
 
 block content
-  h1= title
-  p #{title}
+  h1 snipstrom -- url shortener
+  
+  form(name="shorten", method="post", action="/shorten")
+    input(type="text", placeholder="url here plz", name="url")
+    button(type="submit") submit
+    
+  h1 shortened urls
+  
+  ul
+    each url, i in urls
+      li
+        a(href="#{url.url}")= url.id
