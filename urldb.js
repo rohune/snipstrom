@@ -1,30 +1,25 @@
 var validator = require('validator');
 var _ = require('lodash');
+var config = require('./config');
+
+var rootUrl = config.rootUrl;
+var randomLength = config.randomLength;
+var validChars = config.validChars;
 
 var urls = [];
 
-exports.validate = function(url) {
-  return validator.isURL(url);
-}
+// generate default url for attaching ids to (if not behind reverse proxy)
+// var rootUrl = request.protocol + '://' + request.get('host') + '/id/';
 
-exports.generateId = function(length) {
-  var id = "";
-  var letters = "abcdefghijklmnopqrstuvwxyz";
-
-  for (var i = 0; i < length; i++) {
-    id += letters.charAt(Math.floor(Math.random() * letters.length));
-  }
+exports.shorten = function(url) {
+  if (validator.isURL(url)) {
+    var newId = generateId(randomLength);
+    
+    urls.push({ id: newId, url: url });    
+    return rootUrl + newId;
+  } 
   
-  var urlIds = _.map(urls, 'id');
-  console.log("urlids: " + urlIds);
-  console.log("includes: " + _.includes(urlIds, id));
-  return id;
-}
-
-exports.addUrl = function(url) {
-  
-  
-  return false;
+  return null;
 }
 
 exports.getLongUrl = function(id) {
@@ -37,4 +32,13 @@ exports.getLongUrl = function(id) {
   return null;
 }
 
-exports.getUrls = function() { return urls; }
+var generateId = function(length) {
+  var id = "";
+  var letters = "abcdefghijklmnopqrstuvwxyz";
+
+  for (var i = 0; i < length; i++) {
+    id += validChars.charAt(Math.floor(Math.random() * letters.length));
+  }
+  
+  return id;
+}

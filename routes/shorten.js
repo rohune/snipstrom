@@ -4,27 +4,18 @@ var router = express.Router();
 var urldb = require('../urldb');
 
 router.post('/', function(request, response, next) {  
-  var urls = urldb.getUrls();
-  var newId = urldb.generateId(6);
+  var url = request.body.link;
+  var shortened = urldb.shorten(url);
   
-  // generate default url for attaching ids to (if not behind reverse proxy)
-  // var rootUrl = request.protocol + '://' + request.get('host') + '/id/';
-  var rootUrl = 'http://snip.yliseppo.com/id/';
-  
-  var newUrl = request.body.link;
-  
-  if (urldb.validate(newUrl)) {
-      urls.push({ id: newId, url: newUrl });
-    
+  if (shortened) {
       response
         .set('Content-Type', 'text/plain')
-        .send(rootUrl + newId);
+        .send(shortened);
   } else {
       response
         .set('Content-Type', 'text/plain')
-        .send('invalid url!');
-  }
-  
+        .send('invalid url or parameter name: use \'link\'');
+  }  
 });
 
 module.exports = router;
