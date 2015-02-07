@@ -1,197 +1,27 @@
 0 info it worked if it ends with ok
-1 verbose cli [ '/usr/bin/node',
-1 verbose cli   '/usr/bin/npm',
-1 verbose cli   'install',
-1 verbose cli   'forever',
-1 verbose cli   '-g',
-1 verbose cli   '--save-dev' ]
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'start' ]
 2 info using npm@1.4.28
-3 info using node@v0.10.35
+3 info using node@v0.10.36
 4 verbose node symlink /usr/bin/node
-5 verbose cache add [ 'forever', null ]
-6 verbose cache add name=undefined spec="forever" args=["forever",null]
-7 verbose parsed url { protocol: null,
-7 verbose parsed url   slashes: null,
-7 verbose parsed url   auth: null,
-7 verbose parsed url   host: null,
-7 verbose parsed url   port: null,
-7 verbose parsed url   hostname: null,
-7 verbose parsed url   hash: null,
-7 verbose parsed url   search: null,
-7 verbose parsed url   query: null,
-7 verbose parsed url   pathname: 'forever',
-7 verbose parsed url   path: 'forever',
-7 verbose parsed url   href: 'forever' }
-8 silly lockFile e07f8c4a-forever forever
-9 verbose lock forever /home/grigori/.npm/e07f8c4a-forever.lock
-10 silly lockFile e07f8c4a-forever forever
-11 silly lockFile e07f8c4a-forever forever
-12 verbose addNamed [ 'forever', '' ]
-13 verbose addNamed [ null, '*' ]
-14 silly lockFile 28ef027b-forever forever@
-15 verbose lock forever@ /home/grigori/.npm/28ef027b-forever.lock
-16 silly addNameRange { name: 'forever', range: '*', hasData: false }
-17 verbose request where is /forever
-18 verbose request registry https://registry.npmjs.org/
-19 verbose request id e10c0103f95682c9
-20 verbose url raw /forever
-21 verbose url resolving [ 'https://registry.npmjs.org/', './forever' ]
-22 verbose url resolved https://registry.npmjs.org/forever
-23 verbose request where is https://registry.npmjs.org/forever
-24 info trying registry request attempt 1 at 17:23:28
-25 http GET https://registry.npmjs.org/forever
-26 http 200 https://registry.npmjs.org/forever
-27 silly registry.get cb [ 200,
-27 silly registry.get   { date: 'Mon, 26 Jan 2015 15:23:29 GMT',
-27 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
-27 silly registry.get     etag: '"CTNHYPPWU9QEMGJCO9O6316UR"',
-27 silly registry.get     'content-type': 'application/json',
-27 silly registry.get     'cache-control': 'max-age=60',
-27 silly registry.get     'content-length': '71347',
-27 silly registry.get     'accept-ranges': 'bytes',
-27 silly registry.get     via: '1.1 varnish',
-27 silly registry.get     age: '0',
-27 silly registry.get     'x-served-by': 'cache-ams4140-AMS',
-27 silly registry.get     'x-cache': 'HIT',
-27 silly registry.get     'x-cache-hits': '1',
-27 silly registry.get     'x-timer': 'S1422285809.097885,VS0,VE96',
-27 silly registry.get     vary: 'Accept',
-27 silly registry.get     'keep-alive': 'timeout=10, max=50',
-27 silly registry.get     connection: 'Keep-Alive' } ]
-28 silly addNameRange number 2 { name: 'forever', range: '*', hasData: true }
-29 silly addNameRange versions [ 'forever',
-29 silly addNameRange   [ '0.6.0',
-29 silly addNameRange     '0.6.1',
-29 silly addNameRange     '0.6.2',
-29 silly addNameRange     '0.6.3',
-29 silly addNameRange     '0.6.4',
-29 silly addNameRange     '0.6.5',
-29 silly addNameRange     '0.6.6',
-29 silly addNameRange     '0.6.7',
-29 silly addNameRange     '0.6.8',
-29 silly addNameRange     '0.6.9',
-29 silly addNameRange     '0.7.0',
-29 silly addNameRange     '0.7.1',
-29 silly addNameRange     '0.7.2',
-29 silly addNameRange     '0.7.3',
-29 silly addNameRange     '0.7.4',
-29 silly addNameRange     '0.7.5',
-29 silly addNameRange     '0.8.0',
-29 silly addNameRange     '0.8.1',
-29 silly addNameRange     '0.8.2',
-29 silly addNameRange     '0.8.3',
-29 silly addNameRange     '0.8.4',
-29 silly addNameRange     '0.8.5',
-29 silly addNameRange     '0.9.0',
-29 silly addNameRange     '0.9.1',
-29 silly addNameRange     '0.9.2',
-29 silly addNameRange     '0.10.0',
-29 silly addNameRange     '0.10.5',
-29 silly addNameRange     '0.10.6',
-29 silly addNameRange     '0.10.7',
-29 silly addNameRange     '0.10.8',
-29 silly addNameRange     '0.10.9',
-29 silly addNameRange     '0.10.10',
-29 silly addNameRange     '0.10.11',
-29 silly addNameRange     '0.11.0',
-29 silly addNameRange     '0.11.1',
-29 silly addNameRange     '0.12.0',
-29 silly addNameRange     '0.13.0' ] ]
-30 verbose addNamed [ 'forever', '0.13.0' ]
-31 verbose addNamed [ '0.13.0', '0.13.0' ]
-32 silly lockFile a664d5a5-forever-0-13-0 forever@0.13.0
-33 verbose lock forever@0.13.0 /home/grigori/.npm/a664d5a5-forever-0-13-0.lock
-34 silly lockFile 9b60d490-s-org-forever-forever-0-13-0-tgz https://registry.npmjs.org/forever/-/forever-0.13.0.tgz
-35 verbose lock https://registry.npmjs.org/forever/-/forever-0.13.0.tgz /home/grigori/.npm/9b60d490-s-org-forever-forever-0-13-0-tgz.lock
-36 verbose addRemoteTarball [ 'https://registry.npmjs.org/forever/-/forever-0.13.0.tgz',
-36 verbose addRemoteTarball   '30857921b37994295a23ca1266628fb3aa2c2c00' ]
-37 info retry fetch attempt 1 at 17:23:29
-38 verbose fetch to= /tmp/npm-7924-rL6tmlH7/registry.npmjs.org/forever/-/forever-0.13.0.tgz
-39 http GET https://registry.npmjs.org/forever/-/forever-0.13.0.tgz
-40 http 200 https://registry.npmjs.org/forever/-/forever-0.13.0.tgz
-41 silly lockFile 9b60d490-s-org-forever-forever-0-13-0-tgz https://registry.npmjs.org/forever/-/forever-0.13.0.tgz
-42 silly lockFile 9b60d490-s-org-forever-forever-0-13-0-tgz https://registry.npmjs.org/forever/-/forever-0.13.0.tgz
-43 silly lockFile a664d5a5-forever-0-13-0 forever@0.13.0
-44 silly lockFile a664d5a5-forever-0-13-0 forever@0.13.0
-45 silly lockFile 28ef027b-forever forever@
-46 silly lockFile 28ef027b-forever forever@
-47 silly resolved [ { name: 'forever',
-47 silly resolved     preferGlobal: 'true',
-47 silly resolved     description: 'A simple CLI tool for ensuring that a given node script runs continuously (i.e. forever)',
-47 silly resolved     version: '0.13.0',
-47 silly resolved     author: { name: 'Charlie Robbins', email: 'charlie.robbins@gmail.com' },
-47 silly resolved     maintainers: [ [Object], [Object], [Object], [Object], [Object], [Object] ],
-47 silly resolved     repository: { type: 'git', url: 'http://github.com/nodejitsu/forever.git' },
-47 silly resolved     keywords: [ 'cli', 'fault tolerant', 'sysadmin', 'tools' ],
-47 silly resolved     dependencies:
-47 silly resolved      { colors: '~0.6.2',
-47 silly resolved        cliff: '~0.1.9',
-47 silly resolved        flatiron: '~0.4.2',
-47 silly resolved        'forever-monitor': '~1.5.1',
-47 silly resolved        nconf: '~0.6.9',
-47 silly resolved        nssocket: '~0.5.1',
-47 silly resolved        optimist: '~0.6.0',
-47 silly resolved        timespan: '~2.3.0',
-47 silly resolved        utile: '~0.2.1',
-47 silly resolved        winston: '~0.8.1' },
-47 silly resolved     devDependencies:
-47 silly resolved      { broadway: '~0.3.6',
-47 silly resolved        eventemitter2: '0.4.x',
-47 silly resolved        request: '2.x.x',
-47 silly resolved        vows: '0.7.x' },
-47 silly resolved     bin: { forever: './bin/forever' },
-47 silly resolved     main: './lib/forever',
-47 silly resolved     scripts: { test: 'vows test/**/*-test.js --spec -i' },
-47 silly resolved     engines: { node: '>= 0.8.x' },
-47 silly resolved     gitHead: '8707877ab7b95e011c5216d54b22d561f60b45c6',
-47 silly resolved     bugs: { url: 'https://github.com/nodejitsu/forever/issues' },
-47 silly resolved     homepage: 'https://github.com/nodejitsu/forever',
-47 silly resolved     _id: 'forever@0.13.0',
-47 silly resolved     _shasum: '30857921b37994295a23ca1266628fb3aa2c2c00',
-47 silly resolved     _from: 'forever@',
-47 silly resolved     _npmVersion: '2.1.7',
-47 silly resolved     _nodeVersion: '0.10.33',
-47 silly resolved     _npmUser: { name: 'indexzero', email: 'charlie.robbins@gmail.com' },
-47 silly resolved     dist:
-47 silly resolved      { shasum: '30857921b37994295a23ca1266628fb3aa2c2c00',
-47 silly resolved        tarball: 'http://registry.npmjs.org/forever/-/forever-0.13.0.tgz' },
-47 silly resolved     directories: {},
-47 silly resolved     _resolved: 'https://registry.npmjs.org/forever/-/forever-0.13.0.tgz' } ]
-48 info install forever@0.13.0 into /usr/lib
-49 info installOne forever@0.13.0
-50 verbose lib/node_modules/forever unbuild
-51 verbose tar unpack /home/grigori/.npm/forever/0.13.0/package.tgz
-52 silly lockFile b3dddd35-tar-usr-lib-node-modules-forever tar:///usr/lib/node_modules/forever
-53 verbose lock tar:///usr/lib/node_modules/forever /home/grigori/.npm/b3dddd35-tar-usr-lib-node-modules-forever.lock
-54 silly lockFile f8e1a07e-i-npm-forever-0-13-0-package-tgz tar:///home/grigori/.npm/forever/0.13.0/package.tgz
-55 verbose lock tar:///home/grigori/.npm/forever/0.13.0/package.tgz /home/grigori/.npm/f8e1a07e-i-npm-forever-0-13-0-package-tgz.lock
-56 silly gunzTarPerm modes [ '775', '664' ]
-57 error Error: EACCES, mkdir '/usr/lib/node_modules/forever'
-57 error  { [Error: EACCES, mkdir '/usr/lib/node_modules/forever']
-57 error   errno: 3,
-57 error   code: 'EACCES',
-57 error   path: '/usr/lib/node_modules/forever',
-57 error   fstream_type: 'Directory',
-57 error   fstream_path: '/usr/lib/node_modules/forever',
-57 error   fstream_class: 'DirWriter',
-57 error   fstream_stack:
-57 error    [ '/usr/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23',
-57 error      '/usr/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53',
-57 error      'Object.oncomplete (fs.js:108:15)' ] }
-58 error Please try running this command again as root/Administrator.
-59 error System Linux 3.13.0-44-generic
-60 error command "/usr/bin/node" "/usr/bin/npm" "install" "forever" "-g" "--save-dev"
-61 error cwd /home/grigori/projects/snipstrom
-62 error node -v v0.10.35
-63 error npm -v 1.4.28
-64 error path /usr/lib/node_modules/forever
-65 error fstream_path /usr/lib/node_modules/forever
-66 error fstream_type Directory
-67 error fstream_class DirWriter
-68 error code EACCES
-69 error errno 3
-70 error stack Error: EACCES, mkdir '/usr/lib/node_modules/forever'
-71 error fstream_stack /usr/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23
-71 error fstream_stack /usr/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53
-71 error fstream_stack Object.oncomplete (fs.js:108:15)
-72 verbose exit [ 3, true ]
+5 verbose run-script [ 'prestart', 'start', 'poststart' ]
+6 info prestart snipstrom@0.0.0
+7 info start snipstrom@0.0.0
+8 verbose unsafe-perm in lifecycle true
+9 info snipstrom@0.0.0 Failed to exec start script
+10 error snipstrom@0.0.0 start: `node ./bin/www`
+10 error Exit status 1
+11 error Failed at the snipstrom@0.0.0 start script.
+11 error This is most likely a problem with the snipstrom package,
+11 error not with npm itself.
+11 error Tell the author that this fails on your system:
+11 error     node ./bin/www
+11 error You can get their info via:
+11 error     npm owner ls snipstrom
+11 error There is likely additional logging output above.
+12 error System Linux 3.13.0-45-generic
+13 error command "/usr/bin/node" "/usr/bin/npm" "start"
+14 error cwd /home/grigori/projects/snipstrom
+15 error node -v v0.10.36
+16 error npm -v 1.4.28
+17 error code ELIFECYCLE
+18 verbose exit [ 1, true ]
