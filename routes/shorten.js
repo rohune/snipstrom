@@ -14,7 +14,7 @@ router.post('/', function(request, response, next) {
   } else {
       response
         .set('Content-Type', 'text/plain')
-        .send('invalid url or parameter name: use \'link\'');
+        .send('invalid url or parameter name: use \'link=url\'');
   }  
 });
 
