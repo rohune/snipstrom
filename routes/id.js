@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-var snip = require('../snip');
+var snip = require('../app/snip');
 
 router.get('/:id', function(request, response, next) {
   var longUrl = snip.getLongUrl(request.params.id);

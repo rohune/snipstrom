@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-var urldb = require('../urldb');
+var urldb = require('../app/urldb');
 
 router.get('/', function(req, res, next) {
   var title = "snipstrom -- url shortener";

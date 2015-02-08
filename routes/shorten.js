@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-var snip = require('../snip');
+var snip = require('../app/snip');
 
 router.post('/', function(request, response, next) {  
   var url = request.body.link;

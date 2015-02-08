@@ -4,14 +4,14 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
 
-var index = require('./routes/index');
-var shorten = require('./routes/shorten');
-var id = require('./routes/id');
+var index = require('../routes/index');
+var shorten = require('../routes/shorten');
+var id = require('../routes/id');
 
 var app = express();
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, '../views'));
 app.set('view engine', 'jade');
 
 // uncomment after placing your favicon in /public
