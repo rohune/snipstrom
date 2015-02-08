@@ -5,7 +5,7 @@ var urldb = require('../urldb');
 
 router.get('/', function(req, res, next) {
   var title = "snipstrom -- url shortener";
-  var urls = urldb.getUrls();
+  var urls = urldb.urls;
   
   res.render('index', { title: title, urls: urls });
 });

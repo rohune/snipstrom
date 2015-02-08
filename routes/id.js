@@ -1,10 +1,10 @@
 var express = require('express');
 var router = express.Router();
 
-var urldb = require('../urldb');
+var snip = require('../snip');
 
 router.get('/:id', function(request, response, next) {
-  var longUrl = urldb.getLongUrl(request.params.id);
+  var longUrl = snip.getLongUrl(request.params.id);
   
   if (longUrl) {
       response

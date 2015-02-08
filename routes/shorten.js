@@ -1,11 +1,11 @@
 var express = require('express');
 var router = express.Router();
 
-var urldb = require('../urldb');
+var snip = require('../snip');
 
 router.post('/', function(request, response, next) {  
   var url = request.body.link;
-  var shortened = urldb.shorten(url);
+  var shortened = snip.shorten(url);
   
   if (shortened) {
       response
