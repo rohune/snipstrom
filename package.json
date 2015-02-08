@@ -7,7 +7,6 @@
   },
   "dependencies": {
     "body-parser": "~1.10.1",
-    "connect-ratelimit": "0.0.7",
     "debug": "~2.1.1",
     "express": "~4.11.0",
     "express-better-ratelimit": "^1.1.2",
