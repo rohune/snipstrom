@@ -9,15 +9,15 @@ var validChars = config.validChars;
 var urls = urldb.urls;
 
 // generate root url for attaching ids to (if not behind reverse proxy)
-// var rootUrl = request.protocol + '://' + request.get('host') + '/id/';
+// var rootUrl = request.protocol + '://' + request.get('host') + '/';
 
 exports.shorten = function(url) {
   if (validator.isURL(url)) {
-    // id has random char portion + incremental hex value 
+    // id has random char portion + incremental value 
     var newId = generateId(randomLength) + addIncrement();
     
     urls.push({ id: newId, url: url });    
-    return rootUrl + '/id/' + newId;
+    return rootUrl + '/' + newId;
   } 
   
   return null;
@@ -44,5 +44,5 @@ var generateId = function(length) {
 }
 
 var addIncrement = function() {
-  return urls.length.toString(36);
+  return urls.length.toString(8);
 }

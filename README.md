@@ -5,7 +5,7 @@ very simple url shortener service made with express
 
 usage:
 
-- change your root url to config.js when deployed
+- change your root url to /app/config.js if needed
 
 export NODE_ENV=production
 npm install

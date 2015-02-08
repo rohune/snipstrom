@@ -9,7 +9,8 @@ block content
     
   h1 shortened urls
   
-  ul
-    each url, i in urls
-      li
-        a(href="http://snip.yliseppo.com/id/#{url.id}")= url.url
+  #urls
+    ul
+      each url, i in urls
+        li
+          a(href="#{rootUrl}/#{url.id}")= url.url
