@@ -9,9 +9,7 @@ export NODE_ENV=production
 npm install
 npm start
 
-you can also use forever instead of npm start:
-
-forever start ./bin/www
+replace http://localhost:3000/ with your root url:
 
 curl --data "link=http://www.yliseppo.com" http://localhost:3000/shorten; echo
 -> you will receive the shortened url
