@@ -1,6 +1,8 @@
 # snipstrom
 ## snipstrom - url shortener
 ```
+very simple url shortener service made with express
+
 usage:
 
 - change your root url to config.js when deployed
@@ -17,6 +19,7 @@ curl --data "link=http://www.yliseppo.com" http://localhost:3000/shorten; echo
 curl localhost:3000/id/xxxxxx
 -> you will be 301 redirected to the full url
 
-note: opening http://localhost:3000/ in a browser gives you a page to post urls in a form and a list of shortened links since app reset
+note: opening http://localhost:3000/ in a browser gives you a page to post urls
+in a form and a list of shortened links since app reset
 ```
 
