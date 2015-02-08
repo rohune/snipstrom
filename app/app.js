@@ -4,8 +4,10 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
 
+var config = require('./config');
 var index = require('../routes/index');
 var shorten = require('../routes/shorten');
+var limit = require('../node_modules/express-better-ratelimit/index');
 
 var app = express();
 
@@ -21,7 +23,12 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, '../public')));
 
 app.use('/', index);
-app.use('/shorten', shorten);
+app
+  .use(limit({
+    duration: 1000 * 60 * 60,
+    max: config.limit
+  }))
+  .use('/shorten', shorten);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
